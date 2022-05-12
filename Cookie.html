@@ -1,0 +1,359 @@
+<!doctype html>
+<script>
+	function update() {
+		document.getElementById('text').value = cookiecount;
+		document.title = cookiecount + " Cookies - Cookie Clicker";
+		
+		document.getElementById("amountAutoClick").innerHTML = "You Own " + autoClick + " Auto Clickers";
+		document.getElementById("costAutoClick").innerHTML = ((autoClick+1) * 15) + " Cookies";
+		
+		document.getElementById("amountGrandma").innerHTML = "You Own " + grandma + " Grandma's";
+		document.getElementById("costGrandma").innerHTML = ((grandma+1) * 100) + " Cookies";
+		
+		document.getElementById("amountFarms").innerHTML = "You Own " + farms + " Farms";
+		document.getElementById("costFarm").innerHTML = ((farms+1) * 1100) + " Cookies";
+		
+		document.getElementById("amountMine").innerHTML = "You Own " + mine + " Mines";
+		document.getElementById("costMine").innerHTML = ((mine+1) * 12000) + " Cookies";
+		
+		document.getElementById("amountFactory").innerHTML = "You Own " + factory + " Factories";
+		document.getElementById("costFactory").innerHTML = ((factory+1) * 130000) + " Cookies";
+		
+		document.getElementById("amountBank").innerHTML = "You Own " + bank + " Banks";
+		document.getElementById("costBank").innerHTML = ((bank+1) * 1400000) + " Cookies";
+		
+		document.getElementById("amountTemple").innerHTML = "You Own " + temple +  " Temples";
+		document.getElementById("costTemple").innerHTML = ((temple+1) * 20000000) + " Cookies";
+		
+		document.getElementById("amountTower").innerHTML = "You Own " + tower + " Wizard Towers";
+		document.getElementById("costTower").innerHTML = ((tower+1) * 370000000) + " Cookies";
+		
+		document.getElementById("amountShipment").innerHTML = "You Own " + shipment + " Shipments";
+		document.getElementById("costShipment").innerHTML = ((shipment+1) * 1200000000) + " Cookies";
+		
+		document.getElementById("amountLab").innerHTML = "You Own " + lab + " Alchemy Labs";
+		document.getElementById("costLab").innerHTML = ((lab+1) * 50000000000) + " Cookies";
+		
+		document.getElementById("amountPortal").innerHTML = "You Own " + portal + " Portals";
+		document.getElementById("costPortal").innerHTML = ((portal+1) * 300000000000) + " Cookies";
+		
+		document.getElementById("amountTime").innerHTML = "You Own " + time + " Time Machines";
+		document.getElementById("costTime").innerHTML = ((time+1) * 6000000000000) + " Cookies";
+		
+		document.getElementById("amountAnti").innerHTML = "You Own " + anti + " Antimatter Conductor";
+		document.getElementById("costAnti").innerHTML = ((anti+1) * 40000000000000) + " Cookies";
+		
+		document.getElementById("amountPrism").innerHTML = "You Own " + prism + " Prisms";
+		document.getElementById("costPrism").innerHTML = ((prism+1) * 900000000000000) + " Cookies";
+		
+		document.getElementById("amountFadden").innerHTML = "You Own " + fadden + " Faddens";
+		document.getElementById("costFadden").innerHTML = ((fadden+1) * 50000000000000000000) + " Cookies";
+		
+		document.getElementById("cookiespersecond").innerHTML = "You are gaining " + 
+			(cps) + " Cookies per/sec";
+	}
+	
+	var cps = 0;
+	var cookiecount = 0;
+	var autoClick = 0;
+	var grandma = 0;
+	var farms = 0;
+	var mine = 0;
+	var factory = 0;
+	var bank = 0;
+	var temple = 0;
+	var tower = 0;
+	var shipment = 0;
+	var lab = 0;
+	var portal = 0;
+	var time = 0;
+	var anti = 0;
+	var prism = 0;
+	var fadden = 0;
+	
+	
+	function timer() {
+		cookiecount = cookiecount + autoClick;
+		cookiecount = cookiecount + grandma*2;
+		cookiecount = cookiecount + farms*10;
+		cookiecount = cookiecount + mine*15;
+		cookiecount = cookiecount + factory*30;
+		cookiecount = cookiecount + bank*50;
+		cookiecount = cookiecount + temple*148;
+		cookiecount = cookiecount + tower*229;
+		cookiecount = cookiecount + shipment*526;
+		cookiecount = cookiecount + lab*1936;
+		cookiecount = cookiecount + portal*2373;
+		cookiecount = cookiecount + time*3856;
+		cookiecount = cookiecount + anti*5563;
+		cookiecount = cookiecount + prism*7968;
+		cookiecount = cookiecount + fadden*10354;
+		update()
+	}
+	setInterval(timer, 1000)
+</script>
+<html lang="en">
+<head>
+<title>0 Cookies - Cookie Clicker</title>
+ <!--
+     Cookie Clicker 
+     Filename: Cookie.html
+     Author: Dylan McDowell
+     Date: 5/5/2022
+     HTML and Java Script
+ -->
+</head>
+<body>
+	
+	<b><p>This site is in beta</p></b>
+	<p id="cookiespersecond">You are gaining 0 Cookies per/sec</p>
+	
+	<a href="#" onclick="add()"><img src="Image/cookie/cookie.jpg" alt="Cookie Image Click Here"></a>
+	<br><br>
+	You have:
+	<input type="text" id="text" disabled style= "text-align:center" value = "0">
+	<script>
+	function add() {
+		cookiecount = cookiecount + 1
+		update()
+	}	
+	</script>
+	Cookies
+	<br><br>
+	
+	<p>Buy 1 Auto Clicker</p>
+	<button><a href="#" onClick="buyAutoClick()"><img src="Image/cookie/mouse-hover.jpg" width="30px" height="40px" alt="Buy Auto Clicker button"></a></button>
+	<p id = "costAutoClick"> 15 Cookies</p>
+	<p id = "amountAutoClick">You Own 0 Auto Clickers</p>
+	
+	<br>
+	
+	<p>Buy 1 Grandma</p>
+	<button><a href="#" onClick="buyGrandma()"><img src="Image/cookie/grandma.jpg" width="30px" height="40px" alt= "Buy Grandma button"></a></button>
+	<p id = "costGrandma"> 100 Cookie</p>
+	<p id = "amountGrandma">You Own 0 Grandma's</p>
+	
+	<br>
+	
+	<p>Buy 1 Farm</p>
+	<button><a href="#" onClick="buyFarm()"><img src="Image/cookie/farm.jpg" width="30px" height="40px" alt="Buy Farm button"></a></button>
+	<p id = "costFarm"> 1100 Cookies</p>
+	<p id = "amountFarms">You Own 0 Farms</p>
+	
+	<br>
+	
+	<p>Buy 1 Mine</p>
+    <button><a href="#" onClick="buyMine()"><img src="Image/cookie/mine.jpg" width="30px" height="40px" alt="Buy Mine button"></a></button>
+	<p id = "costMine"> 12000 Cookies</p>
+	<p id = "amountMine">You Own 0 Mines</p>
+	
+	<br>
+	
+	<p>Buy 1 Factory</p>
+	<button><a href="#" onClick="buyFactory()"><img src="Image/cookie/factory.jpg" width="30px" height="40px" alt="Buy Factory button"></a></button>
+	<p id = "costFactory"> 130000 Cookies</p>
+	<p id = "amountFactory">You Own 0 Factorys</p>
+	
+	<br>
+	
+	<p>Buy 1 Bank</p>
+	<button><a href="#" onClick="buyBank()"><img src="Image/cookie/bank.jpg" width="30px" height="40px" alt="Buy Bank button"></a></button>
+	<p id = "costBank"> 1400000 Cookies</p>
+	<p id = "amountBank">You Own 0 Banks</p>
+	
+	<br>
+	
+	<p>Buy 1 Temple</p>
+	<button><a href="#" onClick="buyTemple()"><img src="Image/cookie/temple.jpg" width="30px" height="40px" alt="Buy Temple button"></a></button>
+	<p id = "costTemple"> 20000000 Cookies</p>
+	<p id = "amountTemple">You Own 0 Temples</p>
+	
+	<br>
+	
+	<p>But 1 Wizard Tower</p>
+	<button><a href="#" onClick="buyTower()"><img src="Image/cookie/tower.jpg" width="30px" height="40px" alt="Buy Tower button"></a></button>
+	<p id = "costTower"> 370000000 Cookies</p>
+	<p id = "amountTower">You Own 0 Wizard Towers</p>
+	
+	<br>
+	
+	<p>But 1 Shipment</p>
+	<button><a href="#" onClick="buyShipment()"><img src="Image/cookie/shipment.jpg" width="30px" height="40px" alt="Buy Shipment button"></a></button>
+	<p id = "costShipment"> 1200000000 Cookies</p>
+	<p id = "amountShipment">You Own 0 Shipments</p>
+	
+	<br>
+	
+	<p>But 1 Alchemy Lab</p>
+	<button><a href="#" onClick="buyLab()"><img src="Image/cookie/lab.jpg" width="30px" height="40px" alt="Buy Alchemy Lab button"></a></button>
+	<p id = "costLab"> 50000000000 Cookies</p>
+	<p id = "amountLab">You Own 0 Alchemy Labs</p>
+	
+	<br>
+	
+	<p>But 1 Portal</p>
+	<button><a href="#" onClick="buyPortal()"><img src="Image/cookie/portal.jpg" width="30px" height="40px" alt="Buy Portal button"></a></button>
+	<p id = "costPortal"> 300000000000 Cookies</p>
+	<p id = "amountPortal">You Own 0 Portals</p>
+	
+	<br>
+	
+	<p>But 1 Time Machine</p>
+	<button><a href="#" onClick="buyTime()"><img src="Image/cookie/time.jpg" width="30px" height="40px" alt="Buy Time Machine button"></a></button>
+	<p id = "costTime"> 6000000000000 Cookies</p>
+	<p id = "amountTime">You Own 0 Time Machines</p>
+	
+	<br>
+	
+	<p>But 1 Antimatter Conductor</p>
+	<button><a href="#" onClick="buyAnti()"><img src="Image/cookie/anti.jpg" width="30px" height="40px" alt="Buy Antimatter button"></a></button>
+	<p id = "costAnti"> 40000000000000 Cookies</p>
+	<p id = "amountAnti">You Own 0 Antimatter Conductors</p>
+	
+	<br>
+	
+	<p>But 1 Prism</p>
+	<button><a href="#" onClick="buyPrism()"><img src="Image/cookie/prism.jpg" width="30px" height="40px" alt="Buy Prism button"></a></button>
+	<p id = "costPrism"> 900000000000000 Cookies</p>
+	<p id = "amountPrism">You Own 0 Prism's</p>
+
+	<br>
+	
+	<p>But 1 Fadden</p>
+	<button><a href="#" onClick="buyFadden()"><img src="Image/cookie/fadden.jpg" width="30px" height="40px" alt="Buy fadden button"></a></button>
+	<p id = "costFadden"> 50000000000000000000 Cookies</p>
+	<p id = "amountFadden">You Own 0 Faddens</p>
+	
+	
+	<script>
+	function buyAutoClick() {
+		if(cookiecount >= ((autoClick+1) * 15)) {
+			cookiecount = cookiecount - ((autoClick+1) * 15);
+			autoClick = autoClick + 1;
+			cps = cps+1
+			update()
+		}
+	}
+	function buyGrandma() {
+		if(cookiecount >= ((grandma+1) * 100)) {
+			cookiecount = cookiecount - ((grandma+1) * 100);
+			grandma = grandma + 1;
+			cps = cps+2
+			update()
+		}
+	}
+	function buyFarm() {
+		if(cookiecount >= ((farms+1) * 1100)) {
+			cookiecount = cookiecount - ((farms+1) * 1100);
+			farms = farms + 1;
+			cps = cps+10
+			update()
+		}
+	}
+	function buyMine() {
+		if(cookiecount >= ((mine+1) * 12000)) {
+			cookiecount = cookiecount - ((mine+1) * 12000);
+			mine = mine + 1;
+			cps = cps+15
+			update()
+		}
+	}
+	function buyFactory() {
+		if(cookiecount >= ((factory+1) * 130000)) {
+			cookiecount = cookiecount - ((factory+1) * 130000);
+			factory = factory + 1;
+			cps = cps+30
+			update()
+		}
+	}
+	function buyBank() {
+		if(cookiecount >= ((bank+1) * 1400000)) {
+			cookiecount = cookiecount - ((bank+1) * 1400000);
+			bank = bank + 1;
+			cps = cps+50
+			update()
+		}
+	}
+	function buyTemple() {
+		if(cookiecount >= ((temple+1) * 20000000)) {
+			cookiecount = cookiecount - ((temple+1) * 20000000);
+			temple = temple + 1;
+			cps = cps+148
+			update()
+		}
+	}
+	function buyTower() {
+		if(cookiecount >= ((tower+1) * 370000000)) {
+			cookiecount = cookiecount - ((tower+1) * 370000000);
+			tower = tower + 1;
+			cps = cps+229
+			update()
+		}
+	}
+		
+	function buyShipment() {
+		if(cookiecount >= ((shipment+1) * 1200000000)) {
+			cookiecount = cookiecount - ((shipment+1) * 1200000000);
+			shipment = shipment + 1;
+			cps = cps+526
+			update()
+		}
+	}
+	
+	function buyLab() {
+		if(cookiecount >= ((lab+1) * 50000000000)) {
+			cookiecount = cookiecount - ((lab+1) * 50000000000);
+			lab  = lab + 1;
+			cps = cps+1936
+			update()
+		}
+	}
+		
+	function buyPortal() {
+		if(cookiecount >= ((portal+1) * 300000000000)) {
+			cookiecount = cookiecount - ((portal+1) * 300000000000);
+			portal = portal + 1;
+			cps = cps+2373
+			update()
+		}
+	}
+		
+	function buyTime() {
+		if(cookiecount >= ((time+1) * 6000000000000)) {
+			cookiecount = cookiecount - ((time+1) * 6000000000000);
+			time = time + 1;
+			cps = cps+3856
+			update()
+		}
+	}
+	
+	function buyAnti() {
+		if(cookiecount >= ((anti+1) * 40000000000000)) {
+			cookiecount = cookiecount - ((anti+1) * 40000000000000);
+			anti = anti + 1;
+			cps = cps+5563
+			update()
+		}
+	}
+		
+	function buyPrism() {
+		if(cookiecount >= ((prism+1) * 900000000000000)) {
+			cookiecount = cookiecount - ((prism+1) * 900000000000000);
+			prism = prism + 1;
+			cps = cps+7968
+			update()
+		}
+	}
+		
+	function buyFadden() {
+		if(cookiecount >= ((fadden+1) * 50000000000000000000)) {
+			cookiecount = cookiecount - ((fadden+1) * 50000000000000000000);
+			fadden = fadden + 1;
+			cps = cps+10354
+			update()
+		}
+	}
+	</script>
+	
+</body>
+</html>
